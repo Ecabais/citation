@@ -118,6 +118,9 @@ public class ticketGUI extends BorderPane {
     private Button nextBtn = new Button(">>");
     private Button previousBtn = new Button("<<");
     
+//all Hbox
+    private HBox titleHBox = new HBox(getImageIV(), getTitleLabel());
+    private HBox arrowBtnHbox = new HBox(previousBtn, nextBtn );
     
     //all VBox
     private VBox LicensenoVBox = new VBox(licenseLabel, licenseTF);
@@ -130,13 +133,11 @@ public class ticketGUI extends BorderPane {
     private VBox locationVBox = new VBox(locationLabel, locationTF);
     private VBox issuedByVBox = new VBox(issuedByLabel, issuedByTF);
     private VBox checkboxVbox = new VBox(ViolationLabel,box1, box2, box3, box4, box5, box6, box7, box8);
-    private VBox viewBtnVbox = new VBox(viewBtn, clearViewBtn, nextBtn, previousBtn);
+    private VBox viewBtnVbox = new VBox(viewBtn, arrowBtnHbox, clearViewBtn );
  
     private VBox feedbackVBox = new VBox(feedbackLabel, feedbackTA, feedbackSubmitBtn); 
     private VBox paymentInfoVbox = new VBox(paymentInfoLabel, paymentTextLabel);
     
-    //all Hbox
-    private HBox titleHBox = new HBox(getImageIV(), getTitleLabel());
     private HBox viewVbox = new HBox(viewBtnVbox, viewTA);
     
     /***************
